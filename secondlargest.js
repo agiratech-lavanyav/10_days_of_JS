@@ -28,9 +28,19 @@ function readLine() {
 *   @return {Number} The second largest number in the array.
 **/
 function getSecondLargest(nums) {
-   var max = Math.max.apply(null, nums); 
-    nums.splice(nums.indexOf(max),2); 
-    return Math.max.apply(null, nums);
+   let first = nums[0] , second = -1;
+
+    for(let i = 0; i <= nums.length-1; i++){
+        if(nums[i] > first){
+            second = first;
+            first = nums[i];
+        }
+        else if( nums[i] > second && nums[i] != first){
+            second = nums[i];
+        }
+    }
+    return second;
+    // Complete the function0
 }
 
 
@@ -39,4 +49,5 @@ function main() {
     const nums = readLine().split(' ').map(Number);
     
     console.log(getSecondLargest(nums));
-}
+    console.log("hjkdh");
+} 
