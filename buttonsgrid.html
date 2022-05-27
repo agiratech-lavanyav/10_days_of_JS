@@ -34,12 +34,13 @@
     </div>
 </body>
 <script>
+
     let btn_ids=[1,2,3,6,9,8,7,4];
-let btn_values=[1,2,3,6,9,8,7,4];
-const btn5=document.getElementById("btn5");
-btn5.addEventListener("click",()=>{
-    // left rotation
-btn_values.unshift(btn_values.pop()); 
+    let btn_values=[1,2,3,6,9,8,7,4];
+    const btn5=document.getElementById("btn5");
+    btn5.addEventListener("click",()=>{
+        // left rotation
+    btn_values.unshift(btn_values.pop());
 
 
 // let val = btn_values.shift();    right rotation
